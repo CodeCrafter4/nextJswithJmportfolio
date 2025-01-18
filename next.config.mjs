@@ -2,9 +2,15 @@ import {withSentryConfig} from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  typescript:{
-    ignoreBuildErrors: true,
-  }
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  sentry: {
+    hideSourceMaps: true, // Hide source maps for better security
+    widenClientFileUpload: true, // Include additional source maps for debugging
+    disableLogger: true, // Minimize bundle size
+    automaticVercelMonitors: false, // Disable unless specifically needed
+  },
 };
 
 export default withSentryConfig(nextConfig, {
@@ -39,6 +45,8 @@ hideSourceMaps: true,
 
 // Automatically tree-shake Sentry logger statements to reduce bundle size
 disableLogger: true,
+
+
 
 // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)
 // See the following for more information:

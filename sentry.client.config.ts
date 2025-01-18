@@ -7,11 +7,9 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "https://7fdcd0983ed157ffdf39ca823e1af303@o4508592669851648.ingest.us.sentry.io/4508649381691392",
-
+  
   // Add optional integrations for additional features
   integrations: [
-   
-
     Sentry.feedbackIntegration({
       // Additional SDK configuration goes in here, for example:
       colorScheme: "dark",
@@ -30,5 +28,5 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0,
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
-  debug: false,
+  debug: true,
 });
