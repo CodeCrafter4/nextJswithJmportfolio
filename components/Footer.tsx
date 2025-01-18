@@ -7,6 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
+      
       {/* background grid */}
      
 
