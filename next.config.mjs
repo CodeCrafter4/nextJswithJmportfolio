@@ -4,12 +4,16 @@ const nextConfig = {
   output: "export",
   typescript: {
     ignoreBuildErrors: false,
+    ignorePatterns: ["node_modules", ".next"],
+    experimentalDecorators: true,
+    allExtensions: true,
+    // Add any other TypeScript-specific options here
   },
   sentry: {
-    hideSourceMaps: true, // Hide source maps for better security
-    widenClientFileUpload: true, // Include additional source maps for debugging
-    disableLogger: true, // Minimize bundle size
-    automaticVercelMonitors: false, // Disable unless specifically needed
+    hideSourceMaps: true, 
+    widenClientFileUpload: true, 
+    disableLogger: true, 
+    automaticVercelMonitors: false, 
   },
 };
 
