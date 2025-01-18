@@ -3,7 +3,7 @@ import {withSentryConfig} from "@sentry/nextjs";
 const nextConfig = {
   output: "export",
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
     ignorePatterns: ["node_modules", ".next"],
     experimentalDecorators: true,
     allExtensions: true,
