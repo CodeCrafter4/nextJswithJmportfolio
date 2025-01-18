@@ -1,9 +1,14 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { navItems } from "@/data";
+const Hero = dynamic(() => import("@/components/Hero"), {
+  ssr: false,
+});
+const Grid = dynamic(() => import("@/components/Grid"), {
+  ssr: false,
+});
 
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
+
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
